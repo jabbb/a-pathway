@@ -16,15 +16,16 @@ $(function() {
             var position0 = $(document).height() - $(document).scrollTop();
                 $(newImg).show();
                 $(document).scrollTop($(document).height() - position0);
+                    $(document).scroll(function() {
+        if ($(document).scrollTop() < 500) {
+            //toLoad = false
+            addImgs();
+        }
+    });
             });
         }
     }
 
-    $(document).scroll(function() {
-        //if ($(document).scrollTop() < 500) {
-            //toLoad = false
-            addImgs();
-        //}
     });
 
 });
