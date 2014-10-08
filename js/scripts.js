@@ -1,6 +1,6 @@
-$(function() {
+$(window).load(function() {
     var imgNum = 4;
-    $(window).scrollTop($(document).height());
+    $(body).scrollTop($(document).height());
 
     function addImgs() {
         if (imgNum < 44) {
