@@ -8,10 +8,11 @@ $(function() {
         if (imgNum < 44) {
             console.log("adding");
             var position0 = $(document).height() - $(document).scrollTop();
-            alert(position0);
+            //alert(position0);
             //for (var i = 0; i < 3; i++) {
             var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
-            $("#main").prepend(newImg).hide();
+            $("#main").prepend(newImg);
+            $(newImg).hide();
             imgNum++;
             //}
             $(newImg).load(function() {
