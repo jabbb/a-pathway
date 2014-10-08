@@ -1,4 +1,4 @@
-$(img).load(function() {
+$("img").load(function() {
     var imgNum = 4;
     $(document).scrollTop($(document).height());
 
