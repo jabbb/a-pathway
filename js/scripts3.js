@@ -5,7 +5,7 @@ $(function() {
     });*/
 
     function loadImg() {
-        if (imgNum < 44) {
+        if (imgNum < 46) {
             console.log("adding");
             var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
             $("#main").prepend(newImg);
