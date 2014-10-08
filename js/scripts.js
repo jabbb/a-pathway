@@ -1,5 +1,5 @@
 $(function() {
-    //var imgNum = 4;
+    var imgNum = 4;
     $("img").load(function() {
         $(document).scrollTop($(document).height());
     });
