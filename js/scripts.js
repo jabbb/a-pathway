@@ -21,7 +21,7 @@ $(function() {
     }
 
     $(document).scroll(function() {
-        if ($(document).scrollTop() < 1000) {
+        if ($(document).scrollTop() < 500) {
             //toLoad = false
             addImgs();
         }
