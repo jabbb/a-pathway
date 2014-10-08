@@ -4,7 +4,7 @@ $(function() {
         $(document).scrollTop($(document).height());
     });
 
-    /*function addImgs() {
+    function addImgs() {
         if (imgNum < 44) {
             console.log("adding");
             var position0 = $(document).height() - $(document).scrollTop();
@@ -14,7 +14,7 @@ $(function() {
             $("#main").prepend(newImg).hide();
             imgNum++;
             //}
-            $(newImg).ready(function() {
+            $(newImg).load(function() {
                 $(newImg).show();
                 $(document).scrollTop($(document).height() - position0);
             });
@@ -27,6 +27,6 @@ $(function() {
             console.log($(document).scrollTop());
             addImgs();
         }
-    });*/
+    });
 
 });
