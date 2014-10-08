@@ -23,7 +23,7 @@ $(function() {
     }
 
     $(document).scroll(function() {
-        if ($(document).scrollTop() < $(window).height() && loaded) {
+        if ($(document).scrollTop() < $(window).height() * 2 && loaded) {
             loaded = false
             addImgs();
         }
