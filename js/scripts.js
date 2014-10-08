@@ -1,5 +1,6 @@
 $(function() {
     var imgNum = 2;
+    var loaded;
 
     $("#startingBlock").css('height', $(window).height() + 'px');
     addImgs();
@@ -16,16 +17,16 @@ $(function() {
             var position0 = $(document).height() - $(document).scrollTop();
                 $(newImg).show();
                 $(document).scrollTop($(document).height() - position0);
-                    $(document).scroll(function() {
-        if ($(document).scrollTop() < 500) {
-            //toLoad = false
-            addImgs();
-        }
-    });
+                loaded = true;
             });
         }
     }
 
+    $(document).scroll(function() {
+        if ($(document).scrollTop() < 500 && loaded) {
+            loaded = false
+            addImgs();
+        }
     });
 
 });
