@@ -5,7 +5,7 @@ $(function() {
 
     });
 
-    function addImgs() {
+    /*function addImgs() {
         if (imgNum < 44) {
             console.log("adding");
             var position0 = $(document).height() - $(document).scrollTop();
@@ -28,6 +28,6 @@ $(function() {
             console.log($(document).scrollTop());
             addImgs();
         }
-    });
+    });*/
 
 });
