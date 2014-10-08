@@ -2,8 +2,10 @@ $(function() {
     var imgNum = 2;
 
     $("#startingBlock").css('height', $(window).height() + 'px');
+    addImgs();
+    addImgs();
 
-    $("<img src='img/1.jpg' alt='1'>").load(function() {
+    /*$("<img src='img/1.jpg' alt='1'>").load(function() {
         var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
         $("#main").prepend(newImg);
         $(newImg).hide();
@@ -13,7 +15,7 @@ $(function() {
             $(newImg).show();
             $(document).scrollTop($(document).height());
         });
-    });
+    });*/
 
     function addImgs() {
         if (imgNum < 47) {
@@ -33,7 +35,7 @@ $(function() {
     }
 
     $(document).scroll(function() {
-        if ($(document).scrollTop() == 0) {
+        if ($(document).scrollTop() < 1000) {
             //toLoad = false
             console.log($(document).scrollTop());
             addImgs();
