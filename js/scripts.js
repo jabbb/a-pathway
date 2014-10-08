@@ -1,7 +1,16 @@
 $(function() {
-    var imgNum = 3;
-    $(.first).load(function() {
-        $(document).scrollTop($(document).height());
+    var imgNum = 2;
+    
+    $("<img src='img/1.jpg' alt='1'>").load(function() {
+        var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
+        $("#main").prepend(newImg);
+        $(newImg).hide();
+        imgNum++;
+
+        $(newImg).load(function() {
+            $(newImg).show();
+            $(document).scrollTop($(document).height());
+        });
     });
 
     function addImgs() {
