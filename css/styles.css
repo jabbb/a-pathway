@@ -11,6 +11,16 @@ h1 {
 	margin:0px;
 }
 
+h2 {
+	position: relative;
+	text-align: left;
+	top: -60px;
+	left: 20px;
+	margin: 0;
+	height: 0;
+	font-size: 40px;
+}
+
 p {
 	font-size: 30px;
 }
