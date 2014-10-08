@@ -9,10 +9,11 @@ $(window).load(function() {
             alert(position0);
             //for (var i = 0; i < 3; i++) {
                 var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
-                $("#main").prepend(newImg);
+                $("#main").prepend(newImg).hide();
                 imgNum++;
             //}
-            $(newImg).ready(function() {
+            $(newImg).load(function() {
+                $(newImg).show();
                 $(document).scrollTop($(document).height() - position0);
             });
         }
