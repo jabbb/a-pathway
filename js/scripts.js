@@ -1,6 +1,10 @@
 $(function() {
-    var imgNum = 4;
     $(document).scrollTop($(document).height());
+    for (var i = 1; i < 46; i++) {
+        $("<img />").attr("src", "img/" + i + ".jpg");
+        //alert(i);
+    }
+    var imgNum = 2;
 
     function addImgs() {
         if (imgNum < 44) {
