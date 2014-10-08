@@ -6,7 +6,6 @@ $(function() {
 
     function addImgs() {
         if (imgNum < 47) {
-            console.log("adding");
 
             var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>").hide();
             $("#main").prepend(newImg);
@@ -22,9 +21,8 @@ $(function() {
     }
 
     $(document).scroll(function() {
-        if ($(document).scrollTop() == 0) {
+        if ($(document).scrollTop() < 1000) {
             //toLoad = false
-            console.log($(document).scrollTop());
             addImgs();
         }
     });
