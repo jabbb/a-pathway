@@ -1,6 +1,6 @@
 $(function() {
-    var imgNum = 4;
-    $("<img src='img/1.jpg' alt='1'>").load(function() {
+    var imgNum = 3;
+    $("<img src='img/2.jpg' alt='1'>").load(function() {
         $(document).scrollTop($(document).height());
     });
 
@@ -13,7 +13,7 @@ $(function() {
             $("#main").prepend(newImg);
             $(newImg).hide();
             imgNum++;
-            
+
             $(newImg).load(function() {
                 $(newImg).show();
                 $(document).scrollTop($(document).height() - position0);
