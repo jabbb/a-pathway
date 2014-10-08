@@ -11,11 +11,10 @@ $(function() {
                 var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
                 $("#main").prepend(newImg);
                 imgNum++;
-
-                $(newImg).ready(function() {
-                    $(document).scrollTop($(document).height() - position0);
-                });
             }
+            //$(newImg).ready(function() {
+                $(document).scrollTop($(document).height() - position0);
+            //});
         }
     }
 
