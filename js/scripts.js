@@ -3,7 +3,6 @@ $(function() {
 
     $("#startingBlock").css('height', $(window).height() + 'px');
     addImgs();
-    addImgs();
 
     /*$("<img src='img/1.jpg' alt='1'>").load(function() {
         var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
@@ -35,7 +34,7 @@ $(function() {
     }
 
     $(document).scroll(function() {
-        if ($(document).scrollTop() < 1000) {
+        if ($(document).scrollTop() == 0) {
             //toLoad = false
             console.log($(document).scrollTop());
             addImgs();
