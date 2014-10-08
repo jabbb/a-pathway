@@ -6,7 +6,8 @@ body {
 }
 
 h1 {
-	font-size: 140px;
+	font-family: Georgia, serif;
+	font-size: 120px;
 	font-weight: 400;
 	margin:0px;
 }
