@@ -1,10 +1,11 @@
 $(function() {
     var imgNum = 4;
+    var newImg;
     $("img").load(function() {
         $(document).scrollTop($(document).height());
     });
 
-    var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
+    newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
     $("#main").prepend(newImg);
     $(newImg).hide();
     imgNum++;
@@ -20,7 +21,7 @@ $(function() {
                 $(newImg).show();
                 $(document).scrollTop($(document).height() - position0);
             });
-            var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
+            newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
             $("#main").prepend(newImg);
             $(newImg).hide();
             imgNum++;
