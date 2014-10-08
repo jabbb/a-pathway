@@ -14,7 +14,7 @@ $(function() {
         }
     }
 
-    $(newImg).load(function() {
+    $("img").load(function() {
         var position0 = $(document).height() - $(document).scrollTop();
         $(newImg).show();
         $(document).scrollTop($(document).height() - position0);
