@@ -1,30 +1,23 @@
 $(function() {
     var imgNum = 4;
-    var newImg;
     $("img").load(function() {
         $(document).scrollTop($(document).height());
     });
-
-    newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
-    $("#main").prepend(newImg);
-    $(newImg).hide();
-    imgNum++;
 
     function addImgs() {
         if (imgNum < 44) {
             console.log("adding");
             var position0 = $(document).height() - $(document).scrollTop();
-            //alert(position0);
-            //for (var i = 0; i < 3; i++) {
-            //}
+
+            var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
+            $("#main").prepend(newImg);
+            $(newImg).hide();
+            imgNum++;
+            
             $(newImg).load(function() {
                 $(newImg).show();
                 $(document).scrollTop($(document).height() - position0);
             });
-            newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
-            $("#main").prepend(newImg);
-            $(newImg).hide();
-            imgNum++;
         }
     }
 
