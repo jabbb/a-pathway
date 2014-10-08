@@ -1,6 +1,6 @@
 $(function() {
     //var imgNum = 4;
-    $("img").ready(function() {
+    $("img").load(function() {
         $(document).scrollTop($(document).height());
     });
 
