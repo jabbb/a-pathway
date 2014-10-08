@@ -1,5 +1,18 @@
 body {
 	margin: 0px;
+  font-family: helvetica, arial, sans-serif;
+  text-align: center;
+  color: #ffffff;
+}
+
+h1 {
+	font-size: 140px;
+	font-weight: 400;
+	margin:0px;
+}
+
+p {
+	font-size: 30px;
 }
 
 img {
@@ -12,5 +25,12 @@ img {
 }
 
 #startingBlock {
-	height: 100%;
+	background-image:url('../img/1.jpg');
+  	background-size: 100% 100%;
+	width: 100%;
+}
+
+#title {
+	width: 800px;
+	margin: auto;
 }

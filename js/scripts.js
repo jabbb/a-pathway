@@ -1,6 +1,8 @@
 $(function() {
     var imgNum = 2;
-    
+
+    $("#startingBlock").css('height', $(window).height() + 'px');
+
     $("<img src='img/1.jpg' alt='1'>").load(function() {
         var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
         $("#main").prepend(newImg);
@@ -14,7 +16,7 @@ $(function() {
     });
 
     function addImgs() {
-        if (imgNum < 44) {
+        if (imgNum < 45) {
             console.log("adding");
             var position0 = $(document).height() - $(document).scrollTop();
 
