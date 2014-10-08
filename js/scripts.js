@@ -23,7 +23,7 @@ $(function() {
     }
 
     $(document).scroll(function() {
-        if ($(document).scrollTop() == 0) {
+        if ($(document).scrollTop() > 1000) {
             //toLoad = false
             console.log($(document).scrollTop());
             addImgs();
