@@ -4,26 +4,23 @@ $(function() {
     addImgs()
 
     function addImgs() {
-        if (imgNum < 44) {
-            console.log("adding");
+        //if (imgNum < 44) {
             var position0 = $(document).height() - $(document).scrollTop();
-            //for (var i = 0; i < 3; i++) {
+            for (var i = 2; i < 46; i++) {
             var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
             $("#main").prepend(newImg);
             imgNum++;
-            //}
+            }
             $(newImg).ready(function() {
                 $(document).scrollTop($(document).height() - position0);
             });
-        }
+        //}
     }
 
-    $(document).scroll(function() {
+    /*$(document).scroll(function() {
         if ($(document).scrollTop() == 0) {
-            toLoad = false
-            console.log($(document).scrollTop());
             addImgs();
         }
-    });
+    });*/
 
 });
