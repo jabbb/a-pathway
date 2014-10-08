@@ -1,25 +1,24 @@
 $(function() {
     var imgNum = 4;
-    $("img").load(function() {
+    /*$("img").load(function() {
         $(document).scrollTop($(document).height());
-    });
+    });*/
 
     function addImgs() {
         if (imgNum < 44) {
             console.log("adding");
-            var position0 = $(document).height() - $(document).scrollTop();
-
             var newImg = $("<img src='img/" + imgNum + ".jpg' alt='" + imgNum + "'>");
             $("#main").prepend(newImg);
             $(newImg).hide();
             imgNum++;
-            
-            $(newImg).load(function() {
-                $(newImg).show();
-                $(document).scrollTop($(document).height() - position0);
-            });
         }
     }
+
+    $(newImg).load(function() {
+        var position0 = $(document).height() - $(document).scrollTop();
+        $(newImg).show();
+        $(document).scrollTop($(document).height() - position0);
+    });
 
     $(document).scroll(function() {
         if ($(document).scrollTop() == 0) {
